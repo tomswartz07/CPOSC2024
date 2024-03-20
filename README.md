@@ -90,5 +90,4 @@ There are a number of projects and external resources which were referenced in t
 presentation.
 They can be found here:
 
-- [Home Assistant](https://www.home-assistant.io/)
-- [ESPHome](https://www.esphome.io/)
+- [Meshtastic](https://meshtastic.org/)
