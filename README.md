@@ -91,3 +91,4 @@ presentation.
 They can be found here:
 
 - [Meshtastic](https://meshtastic.org/)
+- [Hackaday](https://hackaday.com/2023/06/26/meshtastic-for-the-greater-good/)

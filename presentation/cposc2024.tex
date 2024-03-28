@@ -51,7 +51,7 @@
         \insertauthor{}\hfill\textbf{\insertinstitute{}}\hfill\insertdate{}\\
         {\footnotesize
         \href{https://hachyderm.io/@tswartz07}{@tswartz07@hachyderm.io}
-        \hfill
+        \hfill{}
         \href{mailto: tom@tswartz.net}{tom@tswartz.net}
         }
     \end{TitleBox}
@@ -63,7 +63,7 @@
   \framesubtitle{And what is he doing here?}
   \begin{columns}[]
     \begin{column}[T]{0.45\paperwidth}
-      {\huge Tom Swartz}
+      {\huge{Tom Swartz}}
       \vfill{}
       \begin{itemize}[<+->]
         \item{Crunchy Data \\ Associate Director of Support}
@@ -73,12 +73,12 @@
       \end{itemize}
     \end{column}
     \begin{column}[T]{0.45\paperwidth}
-      \includegraphics[height=4cm,keepaspectratio]{images/logo.png}
+      \includegraphics[height=6cm,keepaspectratio]{images/logo.png}
     \end{column}
   \end{columns}
 \end{frame}
 
-\section{Meshtastic!}
+\section{What's all this then?}
 \begin{frame}
   \frametitle{Summary}
   We'll be reviewing the following topics, and how they relate to Meshtastic
@@ -146,20 +146,42 @@
   \end{columns}
 \end{frame}
 
+\begin{frame}[fragile]
+  \frametitle{How does Meshtastic compare?}
+  \begin{columns}[]
+    \begin{column}[T]{0.45\paperwidth}
+      \Large{General LoRa (LoRaWAN, GoTenna Mesh)}
+      \begin{itemize}
+        \item{Sometimes proprietary}
+        \item{Semi-strict definitions for messaging and position}
+        \item{GoTenna went corpo}
+      \end{itemize}
+    \end{column}
+    \begin{column}[T]{0.45\paperwidth}
+      \Large{Meshtastic}
+      \begin{itemize}
+        \item{Based on an open hardware spec}
+        \item{Support for a variety of external modules}
+        \item{Currently holds the longest range of all LoRa varieties}
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
 % Install Methods
 \begin{frame}[fragile]
   \frametitle{Getting Started}
   \begin{columns}[]
-    \begin{column}[T]{0.45\paperwidth}
+    \begin{column}[T]{0.35\paperwidth}
       \begin{enumerate}%[<+->]
         \item{Buy/Build hardware}
-        \item{Flash and configure Node}
-        \item{Power it on}
-        \item{Profit!}
+        \item{Flash Firmware}
+        \item{Power it on, pick Region}
+        \item{There is no Step 4!}
       \end{enumerate}
     \end{column}
-    \begin{column}[T]{0.45\paperwidth}
-      \includegraphics[height=6cm,keepaspectratio]{images/tbeam.jpg}
+    \begin{column}[T]{0.55\paperwidth}
+      \includegraphics[height=5.5cm,keepaspectratio]{images/boards.jpg}
     \end{column}
   \end{columns}
 \end{frame}
@@ -181,15 +203,13 @@
 \subsection{Meshtastic Software in Detail}
 \begin{frame}[fragile]
   \frametitle{Meshtastic Software in Detail}
-  Peer to Peer protocol with custom Chirp Spread Spectrum.
-  Logo based on rf-waterfall.
   \vfill{}
   \begin{columns}[]
     \begin{column}[T]{0.45\paperwidth}
       \begin{enumerate}%[<+->]
-        \item{lorem ipsum}
-        \item{lorem ipsum}
-        \item{lorem ipsum}
+        \item{Peer to Peer protocol}
+        \item{Uses custom Chirp Spread Spectrum}
+        \item{Variety of `Modem Presets' for differing environments}
       \end{enumerate}
     \end{column}
     \begin{column}[T]{0.45\paperwidth}
@@ -198,59 +218,21 @@
   \end{columns}
 \end{frame}
 
-%% Integrations
-%\begin{frame}[fragile]
-%  \frametitle{Devices and Entities}
-%  The nuts and bolts of Home Assistant
-%  \vfill{}
-%  \begin{columns}[]
-%    \begin{column}[T]{0.45\paperwidth}
-%      \begin{description}%[<+->]
-%        \item[Devices]{A physical (or logical) group of sensors and inputs. For example, a motion sensor is a device}
-%        \item[Entities]{Any type of `data point' for a Device. For example, a motion sensor's \emph{Entities} can be: `Motion Status', `Battery Level', `Light Level'}
-%      \end{description}
-%    \end{column}
-%    \begin{column}[T]{0.45\paperwidth}
-%      \includegraphics[height=6cm,keepaspectratio]{images/tbeam.jpg}
-%    \end{column}
-%  \end{columns}
-%\end{frame}
-%
-%% How it compares; local control
-%\subsection{How does it compare?}
-%\frame{\subsectionpage}
-%\begin{frame}[fragile]
-%  \frametitle{How does it compare to others?}
-%  \begin{columns}[]
-%    \begin{column}[T]{0.45\paperwidth}
-%      \Large{General IoT Apps}
-%      \begin{itemize}
-%        \item{Almost all depend on external, third-party servers}
-%        \item{Services can be discontinued, making certain devices useless}
-%        \item{Has the potential for information gathering}
-%      \end{itemize}
-%    \end{column}
-%    \begin{column}[T]{0.45\paperwidth}
-%      \Large{Home Assistant}
-%      \begin{itemize}
-%        \item{The majority of the service is hosted locally, no cloud connection}
-%        \item{Support for services can continue after the Manufacturer ends support}
-%        \item{Can be completely firewalled off, in certain cases}
-%      \end{itemize}
-%    \end{column}
-%  \end{columns}
-%\end{frame}
-%\begin{frame}[fragile]
-%  \frametitle{Integration Classifications}
-%  Classifying the Internet of Things
-%  \vfill{}
-%  \begin{description}%[<+->]
-%    \item[Local Push]{Gold Standard, entirely local control directly from Home Assistant}
-%    \item[Local Poll]{Home Assistant direct read/write, but on-device updates may be delayed}
-%    \item[Cloud Push]{Integration of this device happens via the cloud and requires an active internet connection}
-%    \item[Cloud Poll]{Delayed integration of this device happens via the cloud and requires an active internet connection}
-%  \end{description}
-%\end{frame}
+\begin{frame}[fragile]
+  \frametitle{Modem Presets}
+  Pre-defined settings which define bandwidth, spread factor, and coding rate, all of which influence message speed and range/distance.
+  \vfill{}
+  \begin{description}[labelwidth=2cm]%[<+->]
+    \item[\texttt{SHORT FAST}]{Fastest, highest bandwidth, lowest airtime, shortest range}
+    \item[\texttt{SHORT SLOW}]{}
+    \item[\texttt{MEDIUM FAST}]{}
+    \item[\texttt{MEDIUM SLOW}]{}
+    \item[\texttt{LONG FAST}]{Default modem preset, best performance/range balance}
+    \item[\texttt{LONG MODERATE}]{}
+    \item[\texttt{LONG SLOW}]{}
+    \item[\texttt{VERY LONG SLOW}]{Slowest, lowest bandwidth, highest airtime, longest range. Not recommended for anything other than range tests}
+  \end{description}
+\end{frame}
 
 \section{Custom Sensors}
 \frame{\sectionpage}
@@ -278,7 +260,7 @@
   \begin{columns}[]
     \begin{column}[T]{0.45\paperwidth}
       Currently supported `sensor components':
-      \begin{description}%[<+->]
+      \begin{description}[leftmargin=2cm]%[<+->]
         \item[MCP9808]{Temperature}
         \item[BMP280]{Temperature, Barometric Pressure}
         \item[BME280]{Temperature, Barometric Pressure and Humidity}
@@ -327,6 +309,9 @@
 
 \section{Usage and Demo}
 \subsection{Demo of Meshtastic}
+\frame{\subsectionpage}
+
+\subsection{Looking at the Meshtastic Signal}
 \frame{\subsectionpage}
 
 \section{Wrapping Up}
