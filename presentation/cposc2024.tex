@@ -103,8 +103,8 @@
         \item{Can easily attain 6+ mile range}
      \end{itemize}
     \end{column}
-    \begin{column}[T]{0.45\paperwidth}
-      %\includegraphics[height=4cm,keepaspectratio]{images/standards.png}
+    \begin{column}[T]{0.35\paperwidth}
+      \includegraphics[height=6cm,keepaspectratio]{images/LoRaModel.jpg}
     \end{column}
   \end{columns}
 \end{frame}
@@ -146,34 +146,34 @@
   \end{columns}
 \end{frame}
 
-%\begin{frame}[fragile]
-%  \frametitle{How does Meshtastic compare?}
-%  \begin{columns}[]
-%    \begin{column}[T]{0.45\paperwidth}
-%      \Large{General LoRa (LoRaWAN, GoTenna Mesh)}
-%      \begin{itemize}
-%        \item{Sometimes proprietary}
-%        \item{Semi-strict definitions for messaging and position}
-%        \item{GoTenna went corpo}
-%      \end{itemize}
-%    \end{column}
-%    \begin{column}[T]{0.45\paperwidth}
-%      \Large{Meshtastic}
-%      \begin{itemize}
-%        \item{Based on an open hardware spec}
-%        \item{Support for a variety of external modules}
-%        \item{Currently holds the longest range of all LoRa varieties}
-%      \end{itemize}
-%    \end{column}
-%  \end{columns}
-%\end{frame}
+\begin{frame}[fragile]
+  \frametitle{How does Meshtastic compare?}
+  \begin{columns}[]
+    \begin{column}[T]{0.45\paperwidth}
+      \Large{General LoRa\\ (LoRaWAN, GoTenna Mesh)}
+      \begin{itemize}
+        \item{Sometimes proprietary}
+        \item{Semi-strict definitions for messaging and position}
+        \item{GoTenna went corpo}
+      \end{itemize}
+    \end{column}
+    \begin{column}[T]{0.45\paperwidth}
+      \Large{Meshtastic}
+      \begin{itemize}
+        \item{Based on an open hardware spec}
+        \item{Support for a variety of external modules}
+        \item{Committed to remaining open-source}
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
 
 % Install Methods
 \begin{frame}[fragile]
   \frametitle{Getting Started}
   \begin{columns}[]
     \begin{column}[T]{0.35\paperwidth}
-      \begin{enumerate}%[<+->]
+      \begin{enumerate}[<+->]
         \item{Buy/Build hardware}
         \item{Flash Firmware}
         \item{Power it on, pick Region}
@@ -210,6 +210,7 @@
         \item{Peer to Peer protocol}
         \item{Uses custom Chirp Spread Spectrum}
         \item{Variety of `Modem Presets' for differing environments}
+        \item{Default shared Modem Channel, can have 7 other private channels, potentially encrypted}
       \end{enumerate}
     \end{column}
     \begin{column}[T]{0.45\paperwidth}
@@ -232,11 +233,6 @@
     \item[\texttt{LONG SLOW}]{}
     \item[\texttt{VERY LONG SLOW}]{Slowest, lowest bandwidth, highest airtime, longest range. Not recommended for anything other than range tests}
   \end{description}
-\end{frame}
-\begin{frame}[fragile]
-  \frametitle{Channels }
-  Channels can be encrypted or not, etc etc.
-  \vfill{}
 \end{frame}
 
 \section{Custom Sensors}
